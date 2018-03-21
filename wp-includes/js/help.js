@@ -68,13 +68,18 @@ function autoDL(){
 				});
 				$("#read").show("fade", 1500,
 				(function(){
-					$("#clickhere").position({
-						my: "right+20px bottom+15px",
-						at: "left top",
-						of: "#DLlink"
-					});
-					$("#clickhere").show("fade", 1500);
-					done=true;
+					$('html, body').animate({
+						scrollTop: target.offset().top-200
+					}, 1000, "easeInOutCubic", 
+					(function(){
+						$("#clickhere").position({
+							my: "right+20px bottom+15px",
+							at: "left top",
+							of: "#DLlink"
+						});
+						$("#clickhere").show("fade", 1500);
+						done=true;
+					}));
 				}));
 			}));
 		}else{
