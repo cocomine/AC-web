@@ -9,6 +9,7 @@ if(refurl.indexOf(Uplink)<0){ //here
 		jQuery(function($){
 			$("#access").remove();
 			$("#access1").remove();
+			$("#dllink").remove();
 			$("#show").show();
 		});
 	}
