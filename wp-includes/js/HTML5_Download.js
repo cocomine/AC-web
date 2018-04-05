@@ -70,7 +70,7 @@ function stat(Name, url) {
                 saveAs(blob, Name);
                 $('#bar-text').text("Download Complete!");
                 document.getElementById("bgMusic").play();
-                window.location.replace("https://animationcloud.cocopixelmc.com/thx?link="+Uplink);
+                location.replace("https://animationcloud.cocopixelmc.com/thx?link="+Uplink);
             });
         });
     });
