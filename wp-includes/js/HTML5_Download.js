@@ -101,5 +101,5 @@ function errorHandler(e) {
         break;
     };
     $('#bar-text').text("Download Error!");
-    console.log('Error: ' + msg);
+    console.error('Error: ' + msg);
 }
