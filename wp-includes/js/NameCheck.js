@@ -35,7 +35,7 @@ function check(){
 				$("#name").text(json.name);//set Name
 				$("#uuid").text(json.uuid);//set UUID
 				$("#url").text("mctw.xyz/name?q="+json.name);//set link
-				$("#url").attr("href", "https://mctw.xyz/name?q="+json.name);
+				$("#url").attr("data-clipboard-text", "https://mctw.xyz/name?q="+json.name);
 				$("#skin").children("div").children("div").children("img").attr("src", "https://crafatar.com/renders/body/"+json.uuid+"?overlay=true");//set skin
 				$("#more").show();
 				$("#more2").show();
