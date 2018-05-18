@@ -5,6 +5,7 @@
 		
 jQuery(function($) {
 	$("#confirm").click(function() {
+		$("#londing").show();
 		name = $("#Name_input").val();
 		window.history.pushState({},0,"https://cocopixelmc.com/name-check/?q="+name);//set url
 		check();
@@ -58,6 +59,7 @@ function check(){
 				$("#server").html("<span style='font-weight: 400; color: #d92929;'>&#10007;</span>")
 			}
 			console.log("Server check done");
+			$("#londing").hide();
 		};
 		xhr.open("GET", "https://cocopixelmc.com/releaseAPI/player?q="+name);
 		xhr.send(null);
