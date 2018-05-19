@@ -10,6 +10,14 @@ jQuery(function($) {
 		window.history.pushState({},0,"https://cocopixelmc.com/name-check/?q="+name);//set url
 		check();
 	});
+	$("input").keydown(function (event) {
+        if (event.which == 13) {
+            $("#londing").show();
+			name = $("#Name_input").val();
+			window.history.pushState({},0,"https://cocopixelmc.com/name-check/?q="+name);//set url
+			check();
+        }
+    });
 });
 
 
@@ -37,8 +45,10 @@ function check(){
 				$("#url").text("mctw.xyz/name?q="+json.name);//set link
 				$("#url").attr("data-clipboard-text", "https://mctw.xyz/name?q="+json.name);
 				$("#skin").children("div").children("div").children("img").attr("src", "https://crafatar.com/renders/body/"+json.uuid+"?overlay=true");//set skin
+				$(".skinContainer").attr("src", "https://skinrender.ga/embed/?skin.name="+json.name+"&controls.pan=false&camera.position=20,35,20&shadow=true&controls.zoom=false");
 				$("#more").show();
 				$("#more2").show();
+				$("#more3").show();
 				var text = "";
 				for(i in json.names){
 					console.log(json.names[i]);
@@ -46,6 +56,7 @@ function check(){
 				}
 				$("#record").html(text);//set list
 			}else{
+				$("#more3").hide();
 				$("#more").hide();
 				$("#more2").hide();
 				$("#minecraft").html("<span style='font-weight: 400; color: #d92929;'>&#10007;</span>")
