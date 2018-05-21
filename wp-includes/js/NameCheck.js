@@ -52,7 +52,7 @@ function check(){
 				var text = "";
 				for(i in json.names){
 					console.log(json.names[i]);
-					text += json.names[i]+"<br>";
+					text += json.names[i];
 				}
 				$("#record").html(text);//set list
 			}else{
