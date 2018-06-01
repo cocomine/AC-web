@@ -4,12 +4,13 @@
  */
 
 jQuery(function($){
+	var disabled = false;
 	$("#confirm").click(function() {
 		name = $("#Name_input").val();
 		check();
 	});
 	$("input").keydown(function (event) {
-        if (event.which == 13) {
+        	if (event.which == 13 && disabled == false) {
 			name = $("#Name_input").val();
 			check();
 		}
@@ -23,6 +24,8 @@ if(name != 'null'){
 function check(){
 	jQuery(function($){
 		$("#londing").show();
+		$("#confirm").prop('disabled', true);
+		disabled = true;
 		
 		var xhr = new XMLHttpRequest();
 		xhr.onload = function (){
@@ -33,6 +36,8 @@ function check(){
 				$("#show_here").html("<h3>你所輸入的玩家名稱不存在</h3>");
 			}
 			$("#londing").hide();
+			$("#confirm").prop('disabled', false);
+			disabled = false;
 		};
 		xhr.open("GET", "https://cocopixelmc.com/releaseAPI/ban?type=log&q="+name);
 		xhr.send(null);
