@@ -4,18 +4,23 @@
  */
 		
 jQuery(function($) {
+	var disabled = false;
 	$("#confirm").click(function() {
 		$("#londing").show();
+		$("#confirm").prop('disabled', true);
+		disabled = true;
 		name = $("#Name_input").val();
 		window.history.pushState({},0,"https://cocopixelmc.com/name-check/?q="+name);//set url
 		check();
 	});
 	$("input").keydown(function (event) {
-        if (event.which == 13) {
-            $("#londing").show();
-			name = $("#Name_input").val();
-			window.history.pushState({},0,"https://cocopixelmc.com/name-check/?q="+name);//set url
-			check();
+        if (event.which == 13 && disabled == false) {
+        	$("#londing").show();
+		$("#confirm").prop('disabled', true);
+		disabled = true;
+		name = $("#Name_input").val();
+		window.history.pushState({},0,"https://cocopixelmc.com/name-check/?q="+name);//set url
+		check();
         }
     });
 });
@@ -71,6 +76,8 @@ function check(){
 			}
 			console.log("Server check done");
 			$("#londing").hide();
+			$("#confirm").prop('disabled', false);
+			disabled = false;
 		};
 		xhr.open("GET", "https://cocopixelmc.com/releaseAPI/player?q="+name);
 		xhr.send(null);
