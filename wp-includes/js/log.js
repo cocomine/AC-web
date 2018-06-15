@@ -2,9 +2,9 @@
  * Create with Minecraft Coco
  * 29/5/2018 18:48
  */
-
+var disabled = false;
 jQuery(function($){
-	var disabled = false;
+	
 	$("#confirm").click(function() {
 		name = $("#Name_input").val();
 		check();
