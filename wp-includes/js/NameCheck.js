@@ -2,9 +2,9 @@
  * Create with Minecraft Coco
  * 16/5/2018 20:00
  */
-		
+var disabled = false;
 jQuery(function($) {
-	var disabled = false;
+	
 	$("#confirm").click(function() {
 		$("#londing").show();
 		$("#confirm").prop('disabled', true);
