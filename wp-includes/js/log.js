@@ -1,6 +1,7 @@
 /**
  * Create with Minecraft Coco
  * 29/5/2018 18:48
+ * Updata: 16/6/2018 18:57
  */
 var disabled = false;
 jQuery(function($){
