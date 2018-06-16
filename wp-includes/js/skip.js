@@ -1,6 +1,6 @@
 var downloading = false;
 
-function timer skip() {
+function skip() {
     var delayMillis = 5; //5 second
     var timelift = 1000; //1 sec
     
