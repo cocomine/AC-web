@@ -1,9 +1,7 @@
 var downloading = false;
+var delayMillis = 5; //5 second
 
 function skip() {
-    var delayMillis = 5; //5 second
-    var timelift = 1000; //1 sec
-    
     if(downloading == false){
         downloading = true;
         timer();
