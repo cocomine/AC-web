@@ -9,7 +9,7 @@ function skip() {
 }
 
 function timer(){
-    if(delayMillis > 0){
+    if(delayMillis <= 0){
         document.getElementById("wait").innerText="The download will start in "+delayMillis+" seconds...";
         delayMillis --;
         setTimeout(timer(),1000);
