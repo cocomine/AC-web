@@ -9,12 +9,12 @@ function skip() {
 }
 
 function timer(){
-    if(delayMillis != 0){
+    if(delayMillis <= 0){
+        document.getElementById("wait").innerText="Start Downloading..";
+        stat(FileName, link);
+    }else{
         document.getElementById("wait").innerText="The download will start in "+delayMillis+" seconds...";
         delayMillis = delayMillis-1;
         setTimeout(timer(),1000);
-    }else{
-        document.getElementById("wait").innerText="Start Downloading..";
-        stat(FileName, link);
     }
 }
