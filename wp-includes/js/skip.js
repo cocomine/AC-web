@@ -9,11 +9,23 @@ function skip() {
 }
 
 function timer(){
-    for(i=0;i<6;i++){
-        document.getElementById("wait").innerText="The download will start in "+i+" seconds...";
-        delayMillis = delayMillis-1;
-        setTimeout(timer(),1000);
-    }
-    document.getElementById("wait").innerText="Start Downloading..";
-    stat(FileName, link);
+    setTimeout(function () {
+        document.getElementById("wait").innerText="The download will start in 5 seconds...";
+        setTimeout(function () {
+            document.getElementById("wait").innerText="The download will start in 4 seconds...";
+            setTimeout(function () {
+                document.getElementById("wait").innerText="The download will start in 3 seconds...";
+                setTimeout(function () {
+                    document.getElementById("wait").innerText="The download will start in 2 seconds...";
+                    setTimeout(function () {
+                        document.getElementById("wait").innerText="The download will start in 1 seconds...";
+                        setTimeout(function () {
+                            document.getElementById("wait").innerText="Start Downloading..";
+                            stat(FileName, link);
+                        }, 1000);
+                    }, 1000);
+                }, 1000);
+            }, 1000);
+        }, 1000);
+    }, 1000);
 }
