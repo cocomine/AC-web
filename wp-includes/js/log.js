@@ -8,11 +8,13 @@ jQuery(function($){
 	
 	$("#confirm").click(function() {
 		name = $("#Name_input").val();
+		window.history.pushState({},0,"https://cocopixelmc.com/ban/log/?q="+name);//set url
 		check();
 	});
 	$("input").keydown(function (event) {
         	if (event.which == 13 && disabled == false) {
 			name = $("#Name_input").val();
+			window.history.pushState({},0,"https://cocopixelmc.com/ban/log/?q="+name);//set url
 			check();
 		}
 	});
