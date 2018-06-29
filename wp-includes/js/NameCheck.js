@@ -47,8 +47,8 @@ function check(){
 				$("#minecraft").html("<span style='font-weight: 400; color: #21c455;'>&#10003;</span>")
 				$("#name").text(json.name);//set Name
 				$("#uuid").text(json.uuid);//set UUID
-				$("#url").text("mctw.xyz/name?q="+json.name);//set link
-				$("#url").attr("data-clipboard-text", "https://mctw.xyz/name?q="+json.name);
+				$("#url").text("ggo.fun/n?q="+json.name);//set link
+				$("#url").attr("data-clipboard-text", "https://ggo.fun/n?q="+json.name);
 				$("#skin").children("div").children("div").children("img").attr("src", "https://crafatar.com/renders/body/"+json.uuid+"?overlay=true");//set skin
 				$(".skinContainer").attr("src", "https://skinrender.ga/embed/?skin.name="+json.name+"&controls.pan=false&camera.position=20,35,20&shadow=true&controls.zoom=false");
 				$("#more").show();
