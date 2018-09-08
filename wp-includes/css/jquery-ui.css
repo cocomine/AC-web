@@ -592,7 +592,7 @@ button.ui-button::-moz-focus-inner {
 	text-align: left;
 	border-radius: 16px;
 	position: relative;
-	PADDING-RIGHT: 2.5px;
+	PADDING-RIGHT: 2.1%;
 	//overflow: hidden;
 }
 .ui-progressbar .ui-progressbar-value {
