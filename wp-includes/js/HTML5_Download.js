@@ -19,11 +19,11 @@ function downloadFile(url, size, success) {
                 
                 var value = 100*loaded/size;
                 $('#bar-text').text("Downloading...   "+parseInt(value)+"%");
-                $('#bar-text').position(
+                $('#bar-text').position({
                     my: "right top",
                     at: "right top",
                     of: ".ui-progressbar-value"
-                );
+                });
                 $('#bar').progressbar("value", loaded);
                 
             };
