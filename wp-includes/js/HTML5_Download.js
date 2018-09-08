@@ -76,8 +76,8 @@ function stat(Name, url) {
                 $('#bar-text').text("Download Complete!");
                 $('#bar-text').position({
                     my: "right top",
-                    at: "right bottom+1px",
-                    of: ".ui-progressbar-value"
+                    at: "right bottom",
+                    of: "#bar"
                 });
                 document.getElementById("bgMusic").play();
                 location.replace("https://animationcloud.cocopixelmc.com/thx?link="+Uplink);
