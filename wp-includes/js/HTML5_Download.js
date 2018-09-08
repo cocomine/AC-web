@@ -73,7 +73,7 @@ function stat(Name, url) {
             
             downloadFile(url, size, function(blob) {
                 saveAs(blob, Name);
-                $('#bar-text').text("Download Complete!");
+                $('#bar-text').text("Done!");
                 $('#bar-text').position({
                     my: "right top",
                     at: "right bottom",
