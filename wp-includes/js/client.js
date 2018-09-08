@@ -2,7 +2,6 @@
  * Create with Minecraft Coco
  * 24/5/2018 23:02
  */
- 
 jQuery(function($) {
 	$("#confirm").click(function(){
 		var name = $("#Name_input").val();
@@ -16,42 +15,30 @@ jQuery(function($) {
 	});
 	
 	$("span[data-anchor='bans']").click(function(){
-		var xhr = new XMLHttpRequest();
-		xhr.onload = function (){
-			var response = this.responseText;
-			$("#bans").html(response);
-		}
-		xhr.open("GET", "https://cocopixelmc.com/releaseAPI/ban?type=bans");
-		xhr.send(null);
+		getlist("https://cocopixelmc.com/releaseAPI/ban?type=bans", "#bans")
 	});
 	
 	$("span[data-anchor='mutes']").click(function(){
-		var xhr = new XMLHttpRequest();
-		xhr.onload = function (){
-			var response = this.responseText;
-			$("#mutes").html(response);
-		}
-		xhr.open("GET", "https://cocopixelmc.com/releaseAPI/ban?type=mutes");
-		xhr.send(null);
+		getlist("https://cocopixelmc.com/releaseAPI/ban?type=mutes", "#mutes")
 	});
 	
 	$("span[data-anchor='warnings']").click(function(){
-		var xhr = new XMLHttpRequest();
-		xhr.onload = function (){
-			var response = this.responseText;
-			$("#warnings").html(response);
-		}
-		xhr.open("GET", "https://cocopixelmc.com/releaseAPI/ban?type=warnings");
-		xhr.send(null);
+		getlist("https://cocopixelmc.com/releaseAPI/ban?type=warnings", "#warnings")
 	});
 	
 	$("span[data-anchor='kicks']").click(function(){
+		getlist("https://cocopixelmc.com/releaseAPI/ban?type=kicks", "#kicks")
+	});
+});
+
+function getlist(link, id){
+	jQuery(function($) {
 		var xhr = new XMLHttpRequest();
 		xhr.onload = function (){
 			var response = this.responseText;
-			$("#kicks").html(response);
+			$(id).html(response);
 		}
-		xhr.open("GET", "https://cocopixelmc.com/releaseAPI/ban?type=kicks");
-		xhr.send(null);
+		xhr.open("GET", link);
+		xhr.send(null)
 	});
-});
+}
