@@ -21,7 +21,7 @@ function downloadFile(url, size, success) {
                 $('#bar-text').text("Downloading...   "+parseInt(value)+"%");
                 $('#bar-text').position({
                     my: "right top",
-                    at: "right top",
+                    at: "right bottom+1px",
                     of: ".ui-progressbar-value"
                 });
                 $('#bar').progressbar("value", loaded);
