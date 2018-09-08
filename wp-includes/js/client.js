@@ -33,7 +33,7 @@ jQuery(function($) {
 
 function getlist(link, id){
 	jQuery(function($) {
-		$(id).html("<img src='https://i0.wp.com/cocopixelmc.com/wp-content/plugins/wp-support-plus-responsive-ticket-system/asset/images/ajax-loader@2x.gif?w=1170&amp;ssl=1' alt='Please Wait' width=80 height=80 />");
+		$(id).html("<img src='https://i0.wp.com/cocopixelmc.com/wp-content/plugins/wp-support-plus-responsive-ticket-system/asset/images/ajax-loader@2x.gif?w=1170&amp;ssl=1' alt='Please Wait' width='80' height='80' />");
 		var xhr = new XMLHttpRequest();
 		xhr.onload = function (){
 			var response = this.responseText;
