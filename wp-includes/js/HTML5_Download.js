@@ -18,7 +18,7 @@ function downloadFile(url, size, success) {
                 var loaded = e.loaded;
                 
                 var value = 100*loaded/size;
-                $('#bar-text').text("Downloading...   "+parseInt(value)+"%");
+                $('#bar-text').text(parseInt(value)+"%");
                 $('#bar-text').position({
                     my: "right top",
                     at: "right bottom+1px",
@@ -74,6 +74,11 @@ function stat(Name, url) {
             downloadFile(url, size, function(blob) {
                 saveAs(blob, Name);
                 $('#bar-text').text("Download Complete!");
+                $('#bar-text').position({
+                    my: "right top",
+                    at: "right bottom+1px",
+                    of: ".ui-progressbar-value"
+                });
                 document.getElementById("bgMusic").play();
                 location.replace("https://animationcloud.cocopixelmc.com/thx?link="+Uplink);
             });
