@@ -118,16 +118,6 @@ jQuery(function($) {
 					of: "#like"
 				});
 			}
-		
-			var b = $("#IfnoneFB").offset().top;
-			if(b >= $(window).scrollTop() && b+214 < ($(window).scrollTop() + $(window).height())){
-				//console.log("work scroll:"+a+","+$(window).scrollTop()+","+($(window).scrollTop() + $(window).height()));
-				$("#IfnoneFB").position({
-					my: "left-30px top-17px",
-					at: "right bottom",
-					of: "#skip"
-				});
-			}
 		}
 	});
 	
@@ -141,16 +131,6 @@ jQuery(function($) {
 					my: "right+15px bottom+15px",
 					at: "left top",
 					of: "#like"
-				});
-			}
-			
-			var b = $("#IfnoneFB").offset().top;
-			if(b >= $(window).scrollTop() && b+214 < ($(window).scrollTop() + $(window).height())){
-				//console.log("work scroll:"+b+","+$(window).scrollTop()+","+($(window).scrollTop() + $(window).height()));
-				$("#IfnoneFB").position({
-					my: "left-30px top-17px",
-					at: "right bottom",
-					of: "#skip"
 				});
 			}
 		}
@@ -188,14 +168,7 @@ function autoDL(){
 					at: "left top",
 					of: "#like"
 				});
-				$("#clickhere").show("fade", 1500, (function(){
-					$("#IfnoneFB").position({
-						my: "left-30px top-17px",
-						at: "right bottom",
-						of: "#skip"
-					});
-					$("#IfnoneFB").show("fade", 1500);
-				}));
+				$("#clickhere").show("fade", 1500);
 			}));
 		}else{
 			if(show == 0 && dl == 1){
