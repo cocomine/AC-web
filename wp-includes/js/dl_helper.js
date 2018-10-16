@@ -115,7 +115,7 @@ jQuery(function($) {
 				$("#clickhere").position({
 					my: "right+15px bottom+15px",
 					at: "left top",
-					of: "#like"
+					of: "#execute-request-button"
 				});
 			}
 		}
@@ -130,7 +130,7 @@ jQuery(function($) {
 				$("#clickhere").position({
 					my: "right+15px bottom+15px",
 					at: "left top",
-					of: "#like"
+					of: "#execute-request-button"
 				});
 			}
 		}
@@ -166,7 +166,7 @@ function autoDL(){
 				$("#clickhere").position({
 					my: "right+15px bottom+15px",
 					at: "left top",
-					of: "#like"
+					of: "#execute-request-button"
 				});
 				$("#clickhere").show("fade", 1500);
 			}));
