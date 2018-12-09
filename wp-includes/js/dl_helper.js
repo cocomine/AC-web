@@ -159,7 +159,7 @@ function autoDL(){
 		var width = window.screen.width;
 		if(dl == 1 && show == 0 && height>=768 && width>=1024){
 			var target = $(this.hash);
-			target = target.length ? target : $('[name=DLprogress]');
+			target = target.length ? target : $('#execute-request-button');
 			$('html, body').animate({
 				scrollTop: target.offset().top-500
 			}, 1000, "easeInOutCubic", (function(){
