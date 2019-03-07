@@ -68,16 +68,6 @@ function check(){
 			}
 			console.log("Minecraft check done");
 			
-			if(json.server == true){
-				console.log("Server true");
-				$("#server").html("<span style='font-weight: 400; color: #21c455;'>&#10003;</span>")
-			}else{
-				$("#server").html("<span style='font-weight: 400; color: #d92929;'>&#10007;</span>")
-			}
-			console.log("Server check done");
-			$("#londing").hide();
-			$("#confirm").prop('disabled', false);
-			disabled = false;
 		};
 		xhr.open("GET", "https://cocopixelmc.com/releaseAPI/player?q="+name);
 		xhr.send(null);
