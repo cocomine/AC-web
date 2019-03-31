@@ -3,6 +3,7 @@
  * 16/5/2018 20:00
  */
 var disabled = false;
+var name = null;
 jQuery(function($) {
 	
 	$("#confirm").click(function() {
@@ -66,6 +67,7 @@ function check(){
 				$("#more2").hide();
 				$("#minecraft").html("<span style='font-weight: 400; color: #d92929;'>&#10007;</span>")
 			}
+			$("#londing").hide();
 			$("#confirm").prop('disabled', false);
 			disabled = false;
 			console.log("Minecraft check done");
@@ -76,5 +78,3 @@ function check(){
 		
 	});
 }
-
-check();
