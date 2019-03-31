@@ -34,7 +34,7 @@ function check(){
 			var json = JSON.parse(this.responseText);
 			console.dir(json);
 			
-			if(json.minecraft == false && json.server == false){
+			if(json.minecraft == false){
 				$("#Name_can").show();
 				$("#Name_cant").hide();
 			}else{
@@ -66,6 +66,8 @@ function check(){
 				$("#more2").hide();
 				$("#minecraft").html("<span style='font-weight: 400; color: #d92929;'>&#10007;</span>")
 			}
+			$("#confirm").prop('disabled', false);
+			disabled = false;
 			console.log("Minecraft check done");
 			
 		};
