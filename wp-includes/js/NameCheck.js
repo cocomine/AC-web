@@ -35,16 +35,10 @@ function check(){
 			var json = JSON.parse(this.responseText);
 			console.dir(json);
 			
-			if(json.minecraft == false){
-				$("#Name_can").show();
-				$("#Name_cant").hide();
-			}else{
-				$("#Name_can").hide();
-				$("#Name_cant").show();
-			}
-			
 			if(json.minecraft == true){
 				console.log("Minecraft true");
+				$("#Name_can").hide();
+				$("#Name_cant").show();
 				$("#minecraft").html("<span style='font-weight: 400; color: #21c455;'>&#10003;</span>")
 				$("#name").text(json.name);//set Name
 				$("#uuid").text(json.uuid);//set UUID
@@ -62,6 +56,8 @@ function check(){
 				}
 				$("#record").html(text);//set list
 			}else{
+				$("#Name_can").show();
+				$("#Name_cant").hide();
 				$("#more3").hide();
 				$("#more").hide();
 				$("#more2").hide();
