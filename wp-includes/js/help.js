@@ -27,23 +27,16 @@ jQuery(function($){
 	
 	$(window).scroll(function() {
 		if(dl==1){
-			var a = $("#read").offset().top;
-			if(a >= $(window).scrollTop() && a+188 < ($(window).scrollTop() + $(window).height())){
-				$("#read").position({
-					my: "center bottom",
-					at: "center top",
-					of: "#fist"
-				});
-			}
-			
-			var b = $("#clickhere").offset().top;
-			if(b >= $(window).scrollTop() && b+200 < ($(window).scrollTop() + $(window).height())){
+			$("#read").position({
+				my: "center bottom",
+				at: "center top",
+				of: "#fist"
+			});
 			$("#clickhere").position({
 				my: "right+20px bottom+15px",
 				at: "left top",
 				of: "#DLlink"
-				});
-			}
+			});
 		}
 	});
 });
