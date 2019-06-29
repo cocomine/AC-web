@@ -17,7 +17,7 @@ jQuery(function($){
 			var b = $("#clickhere").offset().top;
 			if(b >= $(window).scrollTop() && b+200 < ($(window).scrollTop() + $(window).height())){
 			$("#clickhere").position({
-				my: "right+20px bottom+15px",
+				my: "right bottom",
 				at: "left top",
 				of: "#DLlink"
 				});
@@ -33,7 +33,7 @@ jQuery(function($){
 				of: "#fist"
 			});
 			$("#clickhere").position({
-				my: "right+20px bottom+15px",
+				my: "right bottom",
 				at: "left top",
 				of: "#DLlink"
 			});
@@ -65,12 +65,13 @@ function autoDL(){
 						scrollTop: target.offset().top-200
 					}, 1000, "easeInOutCubic", 
 					(function(){
-						$("#clickhere").position({
-							my: "right+20px bottom+15px",
-							at: "left top",
-							of: "#DLlink"
+						$("#clickhere").show("fade", 1500, (function(){
+							$("#clickhere").position({
+								my: "right bottom",
+								at: "left top",
+								of: "#DLlink"
+							});
 						});
-						$("#clickhere").show("fade", 1500);
 						done=true;
 					}));
 				}));
