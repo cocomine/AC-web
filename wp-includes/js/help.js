@@ -25,7 +25,7 @@ jQuery(function($){
 		}
 	});
 	
-	$(window).scroll(function() {
+	/*$(window).scroll(function() {
 		if(dl==1){
 			$("#read").position({
 				my: "center bottom",
@@ -38,7 +38,7 @@ jQuery(function($){
 				of: "#DLlink"
 			});
 		}
-	});
+	});*/
 });
 
 function autoDL(){
