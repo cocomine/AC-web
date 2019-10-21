@@ -71,7 +71,7 @@ function autoDL(){
 								at: "left top",
 								of: "#DLlink"
 							});
-						});
+						}));
 						done=true;
 					}));
 				}));
